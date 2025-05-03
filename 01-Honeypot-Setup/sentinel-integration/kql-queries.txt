@@ -1,3 +1,6 @@
+// Query to identify successful logon events (EventID 4624) for a specific account
 SecurityEvent
-| where Account has "azureuser" and EventID == 4624
-| project TimeGenerated, Computer, Account, EventID
+| where EventID == 4624  // Filter for successful logon events
+| where Account has "azureuser"  // Narrow down to events involving the specified account
+| project TimeGenerated, Computer, Account, EventID, LogonType, IpAddress  // Select relevant fields for analysis
+| order by TimeGenerated desc  // Sort results by the time of the event in descending order
