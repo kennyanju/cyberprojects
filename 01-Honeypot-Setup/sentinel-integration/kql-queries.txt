@@ -1,0 +1,3 @@
+SecurityEvent
+| where Account has "azureuser" and EventID == 4624
+| project TimeGenerated, Computer, Account, EventID
