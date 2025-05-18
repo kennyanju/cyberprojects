@@ -1,0 +1,10 @@
+# Packet Sniffer Notes
+
+- **Run with Elevated Privileges:** Always execute the script with root/administrator rights to capture network traffic on most interfaces.
+- **Educational Use:** This tool is ideal for learning about network protocols, packet structures, and real-time traffic analysis in a safe, controlled environment.
+- **Extensibility:** The script can be enhanced to:
+  - Log captured packets to a file for later analysis.
+  - Filter packets by protocol (e.g., TCP, UDP, ICMP) or specific ports.
+  - Parse and display detailed packet information (e.g., source/destination IP, ports, payload).
+  - Integrate with monitoring tools or dashboards.
+- **Ethical Considerations:** Only use this tool on networks where you have explicit permission. Unauthorized sniffing is illegal and unethical.
