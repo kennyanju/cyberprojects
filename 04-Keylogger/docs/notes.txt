@@ -1,0 +1,6 @@
+# Keylogger Notes
+
+- **Controlled Environment Only:** Always run this script in a secure, isolated lab environment. Never deploy on production systems or without explicit authorization.
+- **Persistence:** For testing persistence, the keylogger can be packaged as a background process or system service.
+- **Red Team Use:** Useful for red team simulations to demonstrate the risks of endpoint compromise and the importance of endpoint security controls.
+- **Ethical & Legal Notice:** Unauthorized use of keyloggers is illegal and unethical. Only use for educational or authorized security testing purposes.
