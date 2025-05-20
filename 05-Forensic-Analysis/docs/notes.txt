@@ -1,0 +1,24 @@
+# Forensic Analysis Notes
+
+- **Disk Images:** Use `.img` files to simulate real-world forensic scenarios and practice analysis techniques.
+- **Common Tools:**
+  - `fls` — List files and directories within a disk image.
+  - `icat` — Extract files from a disk image by inode number.
+  - `tsk_recover` — Recover deleted files from a disk image.
+  - `foremost` — Carve files from raw disk images based on file signatures.
+- **Best Practices:**
+  - Always maintain a strict chain of custody for evidence.
+  - Work on copies of disk images, never the original.
+  - Document every action and command used during analysis for reproducibility and legal integrity.
+
+## Example Commands
+
+- `fls -r -m / sample.img` — Recursively list all files and directories in the image.
+- `icat sample.img <inode>` — Extract a specific file by its inode number.
+- `tsk_recover sample.img output_dir/` — Recover files to a specified directory.
+- `foremost -i sample.img -o output_dir/` — Carve files from the image into an output directory.
+
+---
+
+**Tip:**  
+Refer to official documentation for each tool for advanced options and usage examples.
