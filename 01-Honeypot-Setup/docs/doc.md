@@ -33,4 +33,8 @@ This documentation explains the structure and usage of the **Honeypot Setup** fo
   ```bash
   az deployment group create \
     --resource-group <your-resource-group> \
-    --template-file arm-template/template.json
+    --template-file arm-template/template.json    git add .
+    git commit -m "Add and update Honeypot Setup documentation"
+    git push origin main    git add .
+    git commit -m "Add and update Honeypot Setup documentation"
+    git push origin main

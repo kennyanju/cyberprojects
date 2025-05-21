@@ -1,0 +1,9 @@
+# Lab Setup Notes
+
+- **Network Isolation:** Always isolate lab networks from production and personal networks to prevent accidental exposure or interference.
+- **Snapshots & Backups:** Take VM snapshots and regular backups before major experiments or configuration changes. This allows quick recovery from mistakes or attacks.
+- **Resource Monitoring:** Use Azure Budgets and Cost Management to monitor cloud usage and avoid unexpected charges.
+- **Access Control:** Restrict remote access to lab systems using firewalls, NSGs, or VPNs. Only allow trusted IPs where possible.
+- **Documentation:** Keep detailed notes of your lab topology, configurations, and any changes made. This helps with troubleshooting and reproducibility.
+- **Automation:** Use scripts and templates (e.g., Terraform, ARM) for consistent and repeatable deployments.
+- **Cleanup:** Regularly review and delete unused resources to save costs and reduce attack surface.
