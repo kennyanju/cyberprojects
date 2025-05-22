@@ -8,29 +8,24 @@ This project demonstrates a basic password-cracking tool that uses dictionary at
 
 ---
 
-## Features
-
-- Performs dictionary-based password cracking.
-- Demonstrates the vulnerabilities of weak passwords.
-- Allows customization of wordlists for testing.
-- Can be containerized and deployed in cloud environments for controlled lab testing.
-
----
-
 ## Project Structure
 
-- **`scripts/`**: Contains the Python script to perform dictionary-based password cracking.
-- **`docs/`**: Includes documentation and sample wordlists for testing.
+- **`scripts/`**: Contains password-cracking scripts in multiple languages:
+  - `password_cracker.py`: Python script for SHA-256 dictionary-based password cracking.
+  - `password_cracker.ps1`: PowerShell 7 script for SHA-256 password cracking.
+  - `password_cracker.sh`: Bash script for SHA-256 password cracking.
+- **`docs/`**: Documentation and sample wordlists for testing.
+  - `common-passwords.txt`: Example wordlist for dictionary attacks.
+  - `notes.txt`: Usage notes and best practices.
 
 ---
 
 ## Prerequisites
 
-Before running the tool, ensure you have the following:
-
-1. **Python 3.x**: Installed on your system. [Download Python](https://www.python.org/downloads/).
-2. **Wordlist**: A text file containing potential passwords (e.g., `docs/common-passwords.txt` or `rockyou.txt`).
-3. **Git**: Installed on your system to clone the repository. [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+- **Python 3.x**: [Download Python](https://www.python.org/downloads/)
+- **PowerShell 7** (for `.ps1` script): [Install PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell)
+- **Bash** (for `.sh` script): Available on Linux/macOS and Windows (via WSL or Git Bash)
+- **Wordlist**: A text file containing potential passwords (e.g., `docs/common-passwords.txt` or `rockyou.txt`)
 
 ---
 
@@ -38,49 +33,45 @@ Before running the tool, ensure you have the following:
 
 ### 1. Clone the Repository
 
-Clone this repository to your local machine:
-
 ```bash
 git clone https://github.com/yourusername/cybersecurity-projects.git
 cd 02-Password-Cracker
 ```
 
-### 2. Install Dependencies
+### 2. Run the Password Cracker
 
-Ensure all required Python libraries are installed. If the script uses external libraries, you can install them using `pip`:
-
-```bash
-pip install -r requirements.txt
-```
-
-> If no `requirements.txt` exists, ensure Python's standard libraries are sufficient for the script.
-
-### 3. Run the Password Cracker
-
-Execute the password-cracking script:
+#### Python
 
 ```bash
-python3 scripts/password_cracker.py
+python3 scripts/password_cracker.py --hash <hashed_password> --wordlist docs/common-passwords.txt
 ```
 
-### 4. Customize the Wordlist
+#### PowerShell 7
 
-You can replace the default wordlist (`docs/common-passwords.txt`) with a more comprehensive one, such as `rockyou.txt`. Download it and update the script to point to the new file.
+```bash
+pwsh scripts/password_cracker.ps1 -Hash "<hashed_password>" -Wordlist "docs/common-passwords.txt"
+```
+
+#### Bash
+
+```bash
+bash scripts/password_cracker.sh <hashed_password> docs/common-passwords.txt
+```
+
+Replace `<hashed_password>` with the SHA-256 hash you want to crack.
+
+---
+
+## Customizing the Wordlist
+
+You can replace `docs/common-passwords.txt` with any wordlist, such as [rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt), for more comprehensive testing.
 
 ---
 
 ## Example Usage
 
-Here’s an example of how the tool works:
-
-1. The script takes a hashed password and a wordlist as input.
-2. It iterates through the wordlist, hashing each word and comparing it to the target hash.
-3. If a match is found, the password is revealed.
-
-Sample command:
-
 ```bash
-python3 scripts/password_cracker.py --hash <hashed_password> --wordlist docs/common-passwords.txt
+python3 scripts/password_cracker.py --hash ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f --wordlist docs/common-passwords.txt
 ```
 
 ---
@@ -89,42 +80,35 @@ python3 scripts/password_cracker.py --hash <hashed_password> --wordlist docs/com
 
 ### Containerization with Docker
 
-You can containerize the script for isolated testing:
-
 1. Create a `Dockerfile`:
 
-```dockerfile
-# Dockerfile
-FROM python:3.9-slim
-WORKDIR /app
-COPY . .
-RUN pip install -r requirements.txt
-CMD ["python3", "scripts/password_cracker.py"]
-```
+    ```dockerfile
+    FROM python:3.9-slim
+    WORKDIR /app
+    COPY . .
+    CMD ["python3", "scripts/password_cracker.py"]
+    ```
 
 2. Build and run the container:
 
-```bash
-docker build -t password-cracker .
-docker run password-cracker
-```
+    ```bash
+    docker build -t password-cracker .
+    docker run password-cracker --hash <hashed_password> --wordlist docs/common-passwords.txt
+    ```
 
-### Deploying in Azure
-
-For controlled lab testing, you can deploy the tool in Azure using services like:
+### Cloud Deployment
 
 - **Azure Container Instances**: Run the containerized script in a managed environment.
 - **Azure Virtual Machines**: Deploy the script on a VM for more flexibility.
-
-You can forward logs from the container or VM to **Microsoft Sentinel** for monitoring and analysis.
+- **Monitoring**: Forward logs to Microsoft Sentinel for analysis.
 
 ---
 
 ## Best Practices
 
-- **Use Strong Passwords**: Avoid using passwords that are easily guessable or found in common wordlists.
-- **Test in Isolated Environments**: Always run this tool in a controlled, isolated environment to prevent unintended consequences.
-- **Obtain Permission**: Only use this tool on systems where you have explicit authorization.
+- **Use Strong Passwords:** Avoid using passwords that are easily guessable or found in common wordlists.
+- **Test in Isolated Environments:** Always run this tool in a controlled, isolated environment.
+- **Obtain Permission:** Only use this tool on systems where you have explicit authorization.
 
 ---
 
