@@ -1,0 +1,6 @@
+# Basic Cryptography Notes
+
+- **AES Encryption:** Uses symmetric keys, meaning the same key is used for both encryption and decryption. It is fast and suitable for securing data at rest or in transit.
+- **SHA-256:** A cryptographic one-way hashing function, ideal for verifying data integrity and storing password hashes. It is not suitable for encryption, as hashes cannot be reversed.
+- **Key Management:** Always use secure key storage solutions (e.g., Azure Key Vault, AWS KMS, HashiCorp Vault) in production environments to protect encryption keys from unauthorized access.
+- **Best Practices:** Never hard-code keys or secrets in source code. Regularly rotate keys and use strong, randomly generated keys for all cryptographic operations.
