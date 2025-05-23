@@ -1,0 +1,6 @@
+# Network Sniffing Notes
+
+- Use tools like Wireshark or scapy to analyze network traffic.
+- Packet capture can reveal cleartext data, protocols, and malicious activity.
+- On Azure, consider enabling Network Watcher and NSG Flow Logs for insights.
+- Always capture traffic with proper permissions in ethical contexts.

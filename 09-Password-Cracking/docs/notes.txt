@@ -1,0 +1,6 @@
+# Password Cracking Notes
+
+- Use salted hashes in production to prevent dictionary attacks.
+- Enforce complex password policies and multi-factor authentication (MFA).
+- Tools like Hashcat and John the Ripper can be used for advanced attacks.
+- Azure AD protects against leaked password usage with password protection policies.

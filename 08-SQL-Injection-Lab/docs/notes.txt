@@ -1,0 +1,8 @@
+# SQL Injection Notes
+
+- **SQL Injection** is a critical web application vulnerability that allows attackers to manipulate database queries by injecting malicious input.
+- **Prevention:** Always use parameterized queries (prepared statements) or ORM frameworks to separate code from data and prevent injection.
+- **Detection:** Log and monitor for unusual or suspicious queries, such as those containing tautologies (`'1'='1'`), comment sequences (`--`), or unexpected keywords.
+- **Mitigation:** Implement input validation and sanitization, enforce least privilege on database accounts, and keep all software up to date.
+- **Cloud Protection:** Azure Web Application Firewall (WAF) and Defender for App Service can detect and block many SQL injection attempts in cloud-hosted applications.
+- **Testing:** Regularly test your applications for SQL injection vulnerabilities using automated tools and manual techniques.
