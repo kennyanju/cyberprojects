@@ -1,6 +1,8 @@
 # Keylogger Notes
 
-- **Controlled Environment Only:** Always run this script in a secure, isolated lab environment. Never deploy on production systems or without explicit authorization.
+- **Controlled Environment Only:** Always run these scripts in a secure, isolated lab environment. Never deploy on production systems or without explicit authorization.
+- **Available Versions:** Keylogger scripts are provided in Python (`keylogger.py`), PowerShell (`keylogger.ps1`), and Bash (`keylogger.sh`) to support multiple platforms (Linux, Windows, macOS with PowerShell 7).
 - **Persistence:** For testing persistence, the keylogger can be packaged as a background process or system service.
 - **Red Team Use:** Useful for red team simulations to demonstrate the risks of endpoint compromise and the importance of endpoint security controls.
+- **Cross-Platform Testing:** Use the appropriate script for your operating system and ensure required dependencies (e.g., `pynput` for Python, `logkeys` or `showkey` for Bash, Windows Forms for PowerShell).
 - **Ethical & Legal Notice:** Unauthorized use of keyloggers is illegal and unethical. Only use for educational or authorized security testing purposes.

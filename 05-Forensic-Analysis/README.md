@@ -8,7 +8,10 @@ This project demonstrates a basic digital forensic analysis workflow using open-
 
 ## Project Structure
 
-- **`scripts/`**: Bash scripts to automate common forensic analysis and recovery tasks.
+- **`scripts/`**: Automation scripts for forensic analysis and recovery tasks:
+  - `recover_deleted_files.sh`: Bash script for file recovery using `foremost`.
+  - `recover_deleted_files.py`: Python script for file recovery using `foremost`.
+  - `recover_deleted_files.ps1`: PowerShell script for file recovery using `foremost`.
 - **`docs/`**: Notes, tool usage references, and best practices.
 - **`sample-data/`**: Sample disk images or directories for forensic simulation and practice.
 
@@ -36,13 +39,24 @@ sudo apt install foremost testdisk sleuthkit
 
 ### 2. Use Provided Scripts
 
-Run the recovery script to extract deleted files from a sample disk image:
+You can recover deleted files from a sample disk image using any of the following scripts:
 
+**Bash:**
 ```bash
-bash scripts/recover_deleted_files.sh [image_path] [output_dir]
+bash scripts/recover_deleted_files.sh sample-data/sample.img recovery_output
 ```
 
-- By default, it uses `sample-data/sample.img` and outputs to `recovery_output/`.
+**Python:**
+```bash
+python3 scripts/recover_deleted_files.py sample-data/sample.img recovery_output
+```
+
+**PowerShell 7:**
+```bash
+pwsh scripts/recover_deleted_files.ps1 -ImagePath sample-data/sample.img -OutputDir recovery_output
+```
+
+- By default, scripts use `sample-data/sample.img` and output to `recovery_output/`.
 - You can specify a different image or output directory as arguments.
 
 ---

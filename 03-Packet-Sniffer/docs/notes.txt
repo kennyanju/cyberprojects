@@ -8,3 +8,7 @@
   - Parse and display detailed packet information (e.g., source/destination IP, ports, payload).
   - Integrate with monitoring tools or dashboards.
 - **Ethical Considerations:** Only use this tool on networks where you have explicit permission. Unauthorized sniffing is illegal and unethical.
+
+
+
+sudo bash packet_sniffer.sh eth0 20

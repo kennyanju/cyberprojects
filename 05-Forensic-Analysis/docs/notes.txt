@@ -6,6 +6,10 @@
   - `icat` — Extract files from a disk image by inode number.
   - `tsk_recover` — Recover deleted files from a disk image.
   - `foremost` — Carve files from raw disk images based on file signatures.
+- **Automation Scripts:**
+  - `recover_deleted_files.sh` — Bash script to automate file recovery from a disk image using `foremost`.
+  - `recover_deleted_files.py` — Python script to automate file recovery from a disk image using `foremost`.
+  - `recover_deleted_files.ps1` — PowerShell script to automate file recovery from a disk image using `foremost`.
 - **Best Practices:**
   - Always maintain a strict chain of custody for evidence.
   - Work on copies of disk images, never the original.
@@ -17,8 +21,11 @@
 - `icat sample.img <inode>` — Extract a specific file by its inode number.
 - `tsk_recover sample.img output_dir/` — Recover files to a specified directory.
 - `foremost -i sample.img -o output_dir/` — Carve files from the image into an output directory.
+- `bash scripts/recover_deleted_files.sh sample-data/sample.img recovery_output` — Run the Bash recovery script.
+- `python3 scripts/recover_deleted_files.py sample-data/sample.img recovery_output` — Run the Python recovery script.
+- `pwsh scripts/recover_deleted_files.ps1 -ImagePath sample-data/sample.img -OutputDir recovery_output` — Run the PowerShell recovery script.
 
 ---
 
 **Tip:**  
-Refer to official documentation for each tool for advanced options and usage examples.
+Refer to official documentation for each tool and script for advanced options and usage examples.
