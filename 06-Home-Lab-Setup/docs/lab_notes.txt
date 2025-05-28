@@ -5,5 +5,7 @@
 - **Resource Monitoring:** Use Azure Budgets and Cost Management to monitor cloud usage and avoid unexpected charges.
 - **Access Control:** Restrict remote access to lab systems using firewalls, NSGs, or VPNs. Only allow trusted IPs where possible.
 - **Documentation:** Keep detailed notes of your lab topology, configurations, and any changes made. This helps with troubleshooting and reproducibility.
-- **Automation:** Use scripts and templates (e.g., Terraform, ARM) for consistent and repeatable deployments.
+- **Automation:** Use scripts and templates (e.g., Bash, Python, PowerShell, Terraform, ARM, Bicep) for consistent and repeatable deployments.
+- **Multi-Platform Support:** Leverage provided scripts in Bash, Python, and PowerShell to automate setup and management across different operating systems.
 - **Cleanup:** Regularly review and delete unused resources to save costs and reduce attack surface.
+- **Security Updates:** Keep all lab systems and software up to date to minimize vulnerabilities.
