@@ -1,0 +1,5 @@
+# Keylogger Notes
+
+- Always run in ethical hacking labs or with explicit permission.
+- Use with system logging tools like Sysmon for behavior monitoring.
+- Azure Sentinel can detect keylogger behavior via abnormal typing activity analytics.

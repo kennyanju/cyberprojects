@@ -1,0 +1,5 @@
+# Forensic Investigation Notes
+
+- Use tools like `fls`, `icat`, `tsk_recover` from SleuthKit.
+- Forensic integrity depends on proper chain of custody.
+- In Azure, snapshot a VM and analyze the disk offline for intrusion investigation.

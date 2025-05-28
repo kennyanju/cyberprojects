@@ -1,0 +1,5 @@
+# Log Analysis Notes
+
+- Monitor for repeated failed logins or unknown IPs.
+- Logs can be ingested into SIEM systems like Azure Sentinel for automated analysis.
+- Alerting on log patterns is a common practice in SOC operations.

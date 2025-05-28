@@ -1,0 +1,5 @@
+# WAF Demo Notes
+
+- Web Application Firewalls block common web exploits like XSS, SQLi, etc.
+- Azure WAF supports custom rules and OWASP-based managed rulesets.
+- Consider logging and alerting in Azure Sentinel for traffic anomalies.
