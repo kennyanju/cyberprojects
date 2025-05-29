@@ -6,3 +6,5 @@
 - **Mitigation:** Implement input validation and sanitization, enforce least privilege on database accounts, and keep all software up to date.
 - **Cloud Protection:** Azure Web Application Firewall (WAF) and Defender for App Service can detect and block many SQL injection attempts in cloud-hosted applications.
 - **Testing:** Regularly test your applications for SQL injection vulnerabilities using automated tools and manual techniques.
+- **Multi-Platform Lab Support:** Example vulnerable apps and attack scripts are provided in Python (`app.py`, `sql_injection_payload.py`), PowerShell (`app.ps1`, `sql_injection_payload.ps1`), and Bash (`app.sh`, `sql_injection_payload.sh`) to support hands-on learning across different environments.
+- **Educational Use:** These resources are for learning and authorized testing only. Never use SQL injection techniques on systems you do not own or have explicit permission to test.
