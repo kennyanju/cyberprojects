@@ -1,0 +1,5 @@
+# Threat Intelligence Integration Notes
+
+- TI feeds provide IOCs (Indicators of Compromise) like IPs, domains, hashes.
+- Azure Sentinel integrates feeds via Graph Security API or file inputs.
+- Use TI to enrich alerts and automate triage or blocking.

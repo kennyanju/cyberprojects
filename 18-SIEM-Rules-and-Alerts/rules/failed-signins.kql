@@ -1,0 +1,5 @@
+// Multiple failed sign-ins
+SigninLogs
+| where ResultType != 0
+| summarize FailedAttempts=count() by UserPrincipalName, bin(TimeGenerated, 1h)
+| where FailedAttempts > 5

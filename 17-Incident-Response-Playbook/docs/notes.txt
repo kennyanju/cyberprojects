@@ -1,0 +1,5 @@
+# Incident Response Notes
+
+- IR playbooks define repeatable steps for handling incidents.
+- Azure Sentinel supports Logic Apps to automate playbook execution.
+- Customize for your environment, systems, and regulatory needs.

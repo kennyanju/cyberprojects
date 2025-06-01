@@ -1,0 +1,5 @@
+# SIEM Rules Notes
+
+- KQL (Kusto Query Language) is used in Azure Monitor and Sentinel.
+- Rules can trigger alerts, emails, or automated Logic Apps.
+- Combine with Threat Intelligence and UEBA for advanced detection.
