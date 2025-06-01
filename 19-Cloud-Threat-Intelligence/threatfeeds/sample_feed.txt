@@ -1,4 +1,15 @@
+# Sample Threat Intelligence Feed (IOCs)
+# Format: one indicator per line (domains, IPs, URLs, hashes)
+
 malicious.com
 badguy.net
+evil.org
+phishing-site.io
 192.168.1.100
 10.10.10.10
+203.0.113.50
+45.77.88.99
+http://malicious.com/phish
+https://badguy.net/malware.exe
+d41d8cd98f00b204e9800998ecf8427e  # Example MD5 hash
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  # Example SHA-256 hash
