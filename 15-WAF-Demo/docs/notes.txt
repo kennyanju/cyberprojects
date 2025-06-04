@@ -1,5 +1,7 @@
 # WAF Demo Notes
 
-- Web Application Firewalls block common web exploits like XSS, SQLi, etc.
-- Azure WAF supports custom rules and OWASP-based managed rulesets.
-- Consider logging and alerting in Azure Sentinel for traffic anomalies.
+- Web Application Firewalls (WAF) block common web exploits such as SQL injection (SQLi), cross-site scripting (XSS), and more.
+- Azure WAF supports custom rules and OWASP-based managed rulesets for enhanced protection.
+- Example attack simulation scripts are provided in Bash (`test_attacks.sh`), PowerShell (`test_attacks.ps1`), and Python (`test_attacks.py`) for multi-platform testing.
+- Enable logging and alerting in Azure Sentinel to monitor and investigate traffic anomalies or blocked attacks.
+- Regularly review WAF logs and tune rules to balance security and usability.
