@@ -1,6 +1,8 @@
 # Network Sniffing Notes
 
-- Use tools like Wireshark or scapy to analyze network traffic.
+- Use tools like Wireshark, tcpdump, tshark, or scapy to analyze network traffic.
+- Example packet sniffer scripts are provided in Python (`sniffer.py`), PowerShell (`sniffer.ps1`), and Bash (`sniffer.sh`) for multi-platform demonstrations.
 - Packet capture can reveal cleartext data, protocols, and malicious activity.
-- On Azure, consider enabling Network Watcher and NSG Flow Logs for insights.
-- Always capture traffic with proper permissions in ethical contexts.
+- On Azure, consider enabling Network Watcher and NSG Flow Logs for insights into cloud network traffic.
+- Always capture traffic with proper permissions and only in ethical, authorized contexts.
+- Review and filter captured data to protect sensitive information and maintain privacy.
